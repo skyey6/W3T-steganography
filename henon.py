@@ -1,3 +1,6 @@
+"""
+实现henon置乱与复原
+"""
 import cv2
 import numpy as np
 from matplotlib.pyplot import imshow
