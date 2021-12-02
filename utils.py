@@ -68,8 +68,5 @@ def png2Jpg(in_path, out_path):
 if __name__ == '__main__':
     # path = 'video/never_gonna_give_you_up.flv'
     # # getFrame(path, 'img/never800.jpg', 800)
-    # inpath = 'video/test.mp4'
-    # outpath = 'video/test_invert.mp4'
-    # setFrame(inpath, outpath, None)
     # video2Imgs('video/test.mp4', 'temp')
     imgs2Video('temp', 'video', 30)

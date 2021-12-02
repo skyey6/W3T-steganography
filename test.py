@@ -3,7 +3,6 @@ import lsb
 import henon
 import arnold
 import encrypt
-import utils
 
 
 def hide_something(cover, secret, key):
