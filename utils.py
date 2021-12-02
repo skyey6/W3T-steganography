@@ -51,7 +51,7 @@ def imgs2Video(in_folder, out_path, fps):
     print(path_list)
     img = cv.imread(path_list[0], cv.IMREAD_GRAYSCALE)
     size = (img.shape[1], img.shape[0])
-    out = cv.VideoWriter(os.path.join(out_path, "video.mp4"), -1, fps, size)
+    out = cv.VideoWriter(os.path.join(out_path, "out.mp4"), -1, fps, size)
 
     for item in path_list:
         if item.endswith('.png'):
