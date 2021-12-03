@@ -12,8 +12,6 @@ def img_encrypt(img, key):
     :param key: 密钥，int型，作为生成伪随机数的seed
     :return: 加密后的黑白图
     """
-    if key > 4294967295:
-        raise ValueError("密钥过大！")
     random.seed(key)
     key_list = []
     key_bin_list = []
@@ -22,7 +20,7 @@ def img_encrypt(img, key):
     for i in key_list:
         for j in range(4):
             key_bin_list.append(str(bin(i)[2:].zfill(4))[j])
-    # key_bin_list = [int(x) for x in bin(key)[2:].zfill(32)]  # 转成32位二进制数，每个数字存入列表中
+
     if img.ndim == 3:  # 转灰度图
         img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     # 灰度图转黑白图
@@ -61,8 +59,6 @@ def img_decrypt(img, key):
     :param key: 密钥，int型，作为生成伪随机数的seed
     :return: 解密后的黑白图
     """
-    if key > 4294967295:
-        raise ValueError("密钥过大！")
     random.seed(key)
     key_list = []
     key_bin_list = []
@@ -71,7 +67,7 @@ def img_decrypt(img, key):
     for i in key_list:
         for j in range(4):
             key_bin_list.append(str(bin(i)[2:].zfill(4))[j])
-    # key_bin_list = [int(x) for x in bin(key)[2:].zfill(32)]  # 转成32位二进制数，每个数字存入列表中
+
     if img.ndim == 3:  # 转灰度图
         img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     # 灰度图转黑白图
